@@ -4,8 +4,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="script.js"></script>
+        <script src="login.js"></script>
 </head>
 <body>
+    <table class="navigation"> 
+        <tr>
+            <th>logo</th>
+            <th>Center name</th>
+            <th>calender pic</th>
+            <th>report system</th>
+            <th> <img src="loginImg.jpg" id="login" onclick="openPop()" width="200" height="auto" alt="login">
+            </th>
+        </tr>
+
+    </table>
+
+    <div class="login" id="loginPop">
+            <form class="form-container">
+              <h1>Login</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closePop()">Close</button>
+            </form>
+    </div> 
   
 </body>
 </html>

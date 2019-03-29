@@ -1,0 +1,14 @@
+table.navigation{
+    border: none;
+}
+
+.login{
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    right: 15px;
+    border: none;
+    z-index: 999;
+
+}
