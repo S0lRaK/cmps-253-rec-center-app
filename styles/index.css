@@ -1,0 +1,60 @@
+#busyTime
+{
+  display: flex;
+}
+
+#bars
+{
+  margin-left: 5%;
+  width: 100%;
+}
+
+#time
+{
+  display: flex;
+  flex-direction: row;
+}
+
+#date
+{
+  margin-left: 10%;
+}
+
+#meters
+{
+  display: flex;
+}
+
+.progressBar
+{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, rgb(0, 204, 10), rgb(243, 255, 68));
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+/*progress[value]::-webkit-progress-value::before {
+  content: '80%';
+  position: absolute;
+  right: 0;
+  top: -125%;
+}*/
