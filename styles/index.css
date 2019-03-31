@@ -5,8 +5,10 @@
 
 #bars
 {
+  display: flex;
   margin-left: 5%;
   width: 100%;
+  flex-direction: column;
 }
 
 #time
@@ -17,6 +19,7 @@
 
 #date
 {
+  display: flex;
   margin-left: 10%;
 }
 
@@ -52,9 +55,44 @@ progress[value]::-webkit-progress-value {
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-/*progress[value]::-webkit-progress-value::before {
-  content: '80%';
-  position: absolute;
-  right: 0;
-  top: -125%;
-}*/
+.newsContainer{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.newsRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 1%;
+}
+
+.news{
+  display: flex;
+  background-color: beige;
+  padding: 3%;
+  border: 2px solid black;
+  border-radius: 2%;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.newsDate{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-right: 2px solid black;
+  margin-right: 2.5%;
+}
+
+.newsTxt{
+  display: flex;
+  margin-left: 2.5%;
+  width: 70%;
+}
+
+#newsArrow{
+  width: 80;
+  height: 80;
+}
