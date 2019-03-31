@@ -1,0 +1,57 @@
+.content {
+  flex-direction: row;
+}
+
+#selection,
+#list {
+  display: flex;
+  flex-direction: column;
+}
+
+#selection {
+  width: 30%;
+}
+
+#calendar {
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar-month {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+#calendar-month button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#calendar-weeks {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-week {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+.calendar-week.selected {
+  background-color: #43ffdd;
+}
+
+.calendar-day {
+  width: 15%;
+}
+
+#list {
+  width: 70%;
+}

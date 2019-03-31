@@ -1,5 +1,22 @@
-#main
-{
-  margin-left: 5%;
-  margin-right: 5%;
+/*
+Colour palette
+primary-color = #ff6e03
+primary-light-color = #ff9f41
+accent-color = #43ffdd
+*/
+
+html {
+	background-color: #ff9f41;
+}
+
+body {
+	margin: 0;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+div.content {
+	margin: 0 5%;
+	display: flex;
 }
