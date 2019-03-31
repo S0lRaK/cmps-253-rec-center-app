@@ -9,10 +9,37 @@
   <link rel="stylesheet" href="styles/index.css">
   <script src="js/index.js"></script>
   <title>Document</title>
+        <script src="login.js"></script>
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="content">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="">Schedule</a></li>
+        <li><a href="">Report</a></li>
+        <li onclick="openPop()">Login</li>
+      </ul>  
+
+    <div class="login" id="loginPop">
+            <form class="form-container">
+              <br>
+              <br>
+              <br>
+              <br>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closePop()">Close</button>
+            </form>
+    </div> 
+  
     <div id="busyTime">
       <div>
         <img src="https://via.placeholder.com/150">
