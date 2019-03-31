@@ -4,25 +4,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="script.js"></script>
         <script src="login.js"></script>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table class="navigation"> 
-        <tr>
-            <th>logo</th>
-            <th>Center name</th>
-            <th>calender pic</th>
-            <th>report system</th>
-            <th> <img src="loginImg.jpg" id="login" onclick="openPop()" width="200" height="auto" alt="login">
-            </th>
-        </tr>
-
-    </table>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="">Schedule</a></li>
+        <li><a href="">Report</a></li>
+        <li onclick="openPop()">Login</li>
+      </ul>  
 
     <div class="login" id="loginPop">
             <form class="form-container">
-              <h1>Login</h1>
+              <br>
+              <br>
+              <br>
+              <br>
           
               <label for="email"><b>Email</b></label>
               <input type="email" placeholder="Enter Email" name="email" required>
