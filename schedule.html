@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Rec. Center - Schedule</title>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Kodchasan:400,700|Roboto"
+			rel="stylesheet"
+		/>
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="styles/master.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/schedule.css" />
+	</head>
+	<body>
+		<header></header>
+		<div class="content">
+			<div id="selection">
+				<div id="calendar">
+					<div id="calendar-month">
+						<button id="previous-month" onclick="previousMonth()">
+							<i class="material-icons">keyboard_arrow_left</i>
+						</button>
+						<span></span>
+						<button id="next-month" onclick="nextMonth()">
+							<i class="material-icons">keyboard_arrow_right</i>
+						</button>
+					</div>
+					<div id="calendar-weeks"></div>
+				</div>
+				<div id="filter"></div>
+			</div>
+			<div id="list"></div>
+    </div>
+    <!-- Custom Scripts -->
+		<script src="js/schedule.js"></script>
+	</body>
+</html>
