@@ -21,7 +21,9 @@
 
 #time {
 	display: flex;
-	flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 2%;
+  font-size: 1.5rem;
 }
 
 #date {
@@ -39,6 +41,10 @@
   flex-direction: column;
   margin: 0 5% 2% 0;
 }
+
+.progressBar span {
+  margin-bottom: 5%;
+} 
 
 progress[value] {
 	/* Reset the default appearance */
