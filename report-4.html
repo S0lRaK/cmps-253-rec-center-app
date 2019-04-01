@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Play It Again Recreation Center | Report Issue</title>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Kodchasan:400,700"
+			rel="stylesheet"
+		/>
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="styles/master.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/report-4.css" />
+		<!-- Custom Scripts -->
+		<script src="js/login.js"></script>
+		<script src="js/report.js"></script>
+	</head>
+	<body>
+		<header>
+			<ul class="navbar">
+				<a href="index.html">
+					<img src="images/logo.jpg" alt="Play it Again logo" />
+				</a>
+				<li>
+					<a href="schedule.html">
+						Schedule
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						Report Issue
+					</a>
+				</li>
+				<li onclick="openPop()">
+					Login
+				</li>
+			</ul>
+		</header>
+
+		<div id="login">
+			<form class="form-container">
+				<br />
+				<br />
+				<br />
+				<br />
+
+				<label for="email"><b>Email</b></label>
+				<input type="email" placeholder="Enter Email" name="email" required />
+
+				<label for="psw"><b>Password</b></label>
+				<input
+					type="password"
+					placeholder="Enter Password"
+					name="psw"
+					required
+				/>
+
+				<button type="submit" class="btn">Login</button>
+				<button type="button" class="btn cancel" onclick="closePop()">
+					Close
+				</button>
+			</form>
+		</div>
+		<div class="content">
+			<div id="box">
+				<ul class="progressbar">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li class="active"></li>
+				</ul>
+			</div>
+			<div id="issue">
+				<p>Description:</p>
+			</div>
+			<div id="comment">
+				<textarea rows="10" cols="95" placeholder="Describe the issue" required>
+				</textarea>
+			</div>
+			<div id="file">
+				<input type="file" name="file" />
+				<label for="file">Add Photos/Videos</label>
+			</div>
+
+			<!-- Was meant to add in a popup here to confirm whatever the user wrote and then to move onto another 
+        "Report Submitted" popup and then that would be it. Still a work in progress.
+
+        <div class="confirmation disabled">
+            <div class="complete_order_box">
+                <div class="side_order">
+                    <div class="item_name">Order</div>
+                </div>
+                <div class="form_order">
+                    <div>
+                        Type:
+                        <input type="text" id="type">
+                    </div>
+                    <div>
+                        Room:
+                        <input type="text" id="room">
+                    </div>
+                    <div>
+                        Date Occurred:
+                        <input type="text" id="incident">
+                    </div>
+                     <div>
+                        Description Provided:
+                        <input type="text" id="description">
+                    </div>
+                </div>
+                <div class="finish_form">
+                    <button onclick="">Submit Report</button>
+                </div> 
+            </div> 
+        </div> -->
+			<div id="page-selection">
+				<a
+					href="report-3.html"
+					class="previous"
+					onclick="popup(this)"
+					data-type="back"
+				>
+					<i class="material-icons">keyboard_arrow_left</i>
+				</a>
+				<a href="#" class="next" onclick="popup(this)" data-type="next">
+					<i class="material-icons">keyboard_arrow_right</i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

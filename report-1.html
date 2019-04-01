@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Play It Again Recreation Center | Schedule</title>
+		<title>Play It Again Recreation Center | Report Issue</title>
 		<!-- Material Icons -->
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -18,7 +18,7 @@
 		<!-- Custom Styles -->
 		<link rel="stylesheet" href="styles/master.css" />
 		<link rel="stylesheet" href="styles/navbar.css" />
-		<link rel="stylesheet" href="styles/schedule.css" />
+		<link rel="stylesheet" href="styles/report-1.css" />
 		<!-- Custom Scripts -->
 		<script src="js/login.js"></script>
 	</head>
@@ -28,13 +28,13 @@
 				<a href="index.html">
 					<img src="images/logo.jpg" alt="Play it Again logo" />
 				</a>
-				<li class="active">
-					<a href="#">
+				<li>
+					<a href="schedule.html">
 						Schedule
 					</a>
 				</li>
-				<li>
-					<a href="report-1.html">
+				<li class="active">
+					<a href="#">
 						Report Issue
 					</a>
 				</li>
@@ -69,24 +69,32 @@
 			</form>
 		</div>
 		<div class="content">
-			<div id="selection">
-				<div id="calendar">
-					<div id="calendar-month">
-						<button id="previous-month" onclick="previousMonth()">
-							<i class="material-icons">keyboard_arrow_left</i>
-						</button>
-						<span></span>
-						<button id="next-month" onclick="nextMonth()">
-							<i class="material-icons">keyboard_arrow_right</i>
-						</button>
-					</div>
-					<div id="calendar-weeks"></div>
-				</div>
-				<div id="filter"></div>
+			<div id="box">
+				<ul class="progressbar">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
 			</div>
-			<div id="list"></div>
+			<div id="issue">
+				<p>What kind of issue do you want to report?</p>
+			</div>
+			<div id="options">
+				<button id="button-damage" onclick="setButtonActive(event)">
+					DAMAGE
+				</button>
+				<button disabled>MISUSE</button>
+				<button disabled>MISCONDUCT</button>
+			</div>
+			<div id="page-selection">
+				<a href="#" id="previous-step" class="hidden"></a>
+				<a href="report-2.html">
+					<i class="material-icons">keyboard_arrow_right</i>
+				</a>
+			</div>
 		</div>
 		<!-- Custom Scripts -->
-		<script src="js/schedule.js"></script>
+		<script src="js/report.js"></script>
 	</body>
 </html>

@@ -31,6 +31,10 @@ body {
 	background-color: #ff6e03;
 }
 
+.navbar:first-child() {
+	width: 30%;
+}
+
 .navbar a img {
 	max-height: 80px;
 }
@@ -39,9 +43,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 20%;
-	border-right: 1px solid black;
-	border-left: 1px solid black;
+	width: 24%;
 	font-size: 1.2rem;
 	cursor: pointer;
 }
