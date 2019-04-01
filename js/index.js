@@ -1,6 +1,15 @@
 "use strict";
 
-window.onload = setCurrentDateTime;
+window.onload = initialize;
+
+//counts the total people in the gym
+let totalPeople = 0;
+
+function initialize() {
+	setCurrentDateTime();
+	setMeters();
+	setGauge();
+}
 
 function setCurrentDateTime() {
 	let months = new Array(
@@ -30,4 +39,41 @@ function setCurrentDateTime() {
 function moreNews() {
 	let displayRow = document.getElementById("newsR3");
 	displayRow.style = true;
+}
+
+function setMeters() {
+	let progressBars = document.querySelectorAll("progress");
+	for(let bar of progressBars){
+		let people = getRandomInt(0, 26);
+		bar.value = people;
+		totalPeople = totalPeople + people;
+	}
+}
+
+function setGauge() {
+	const gauge = document.getElementById("gauge");
+	if(totalPeople <= 20){
+		gauge.src = "images/empty.jpg";
+	}
+	else	if(totalPeople <= 40){
+		gauge.src = "images/empty2.jpg";
+	}
+	else if(totalPeople <= 60){
+		gauge.src = "images/half.jpg";
+	}
+	else if(totalPeople <= 80){
+		gauge.src = "images/half2.jpg";
+	}
+	else if(totalPeople <= 100){
+		gauge.src = "images/full2.jpg";
+	}
+	else if(totalPeople > 100){
+		gauge.src = "images/full.jpg";
+	}
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }

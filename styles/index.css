@@ -11,6 +11,8 @@
 #gauge {
   display: flex;
   margin-right: 5%;
+  width: 326;
+  height: 211;
 }
 
 #bars {
