@@ -1,7 +1,8 @@
 "use strict";
 
+var check = true;
 window.onload = setCurrentDateTime;
-
+window.onload = newsCheck;
 function setCurrentDateTime() {
 	let months = new Array(
 		"January",
@@ -26,8 +27,19 @@ function setCurrentDateTime() {
 	now = currentMonth + " " + day + ", " + year + " " + time;
 	document.getElementById("date").innerHTML = now;
 }
+function newsCheck(){
+	if(check == true){
+		window.onwheel = moreNews;
+	}
 
-function moreNews() {
+}
+function onWheel(event) {
+	moreNews.off('DOMMouseScroll mousewheel');
+	
+}
+function moreNews(event) {
 	let displayRow = document.getElementById("newsR3");
 	displayRow.style = true;
+  
+	
 }
