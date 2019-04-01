@@ -16,7 +16,45 @@ body {
   color: rgba(0, 0, 0, 0.87);
 }
 
-div.content {
+.content {
 	margin: 0 5%;
 	display: flex;
+}
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #ff6e03;
+}
+
+.navbar li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+.navbar li:last-child {
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#login {
+	display: none;
+	position: fixed;
+	top: 0;
+	margin: auto;
+	right: 15px;
+	border: none;
+	z-index: 999;
 }

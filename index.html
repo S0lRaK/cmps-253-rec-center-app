@@ -1,154 +1,161 @@
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Rec. Center</title>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Kodchasan:400,700|Roboto"
+			rel="stylesheet"
+		/>
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="styles/master.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<!-- Custom Scripts -->
+		<script src="js/index.js"></script>
+		<script src="js/login.js"></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles/navbar.css">
-  <link rel="stylesheet" href="styles/master.css">
-  <link rel="stylesheet" href="styles/index.css">
-  <script src="js/index.js"></script>
-  <title>Document</title>
-        <script src="login.js"></script>
-        <link rel="stylesheet" href="style.css">
-</head>
+	<body>
+		<header>
+			<ul class="navbar">
+				<li><a href="#">Home</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="">Report</a></li>
+				<li onclick="openPop()">Login</li>
+			</ul>
+		</header>
 
-<body>
-  <div class="content">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="">Schedule</a></li>
-        <li><a href="">Report</a></li>
-        <li onclick="openPop()">Login</li>
-      </ul>  
+		<div id="login">
+			<form class="form-container">
+				<br />
+				<br />
+				<br />
+				<br />
 
-    <div class="login" id="loginPop">
-            <form class="form-container">
-              <br>
-              <br>
-              <br>
-              <br>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="email" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closePop()">Close</button>
-            </form>
-    </div> 
-  
-    <div id="busyTime">
-      <div>
-        <img src="https://via.placeholder.com/150">
-      </div>
-      <div id="bars">
-        <div id="time">
-          <h3>How busy is the center now?</h3>
-          <h3 id="date"></h3>
-        </div>
-        <br>
-        <br>
-        <div id="meters">
-          <div class="progressBar">
-            <strong>Gym</strong>
-            <progress value="10" max="25"></progress>
-          </div>
-          <div class="progressBar">
-            <strong>Weight Room</strong>
-            <progress value="10" max="25"></progress>
-          </div>
-          <div class="progressBar">
-            <strong>Pool</strong>
-            <progress value="10" max="25"></progress>
-          </div>
-          <div class="progressBar">
-            <strong>Squash</strong>
-            <progress value="10" max="25"></progress>
-          </div>
-          <div class="progressBar">
-            <strong>Field</strong>
-            <progress value="10" max="25"></progress>
-          </div>
+				<label for="email"><b>Email</b></label>
+				<input type="email" placeholder="Enter Email" name="email" required />
 
-        </div>
-      </div>
-    </div>
+				<label for="psw"><b>Password</b></label>
+				<input
+					type="password"
+					placeholder="Enter Password"
+					name="psw"
+					required
+				/>
 
-    <br>
-    <br>
-    
+				<button type="submit" class="btn">Login</button>
+				<button type="button" class="btn cancel" onclick="closePop()">
+					Close
+				</button>
+			</form>
+		</div>
 
-    <div id="newsContainer">
-      <div class="newsRow">
-        <div class="news">
-          <div class="newsDate">
-            <span>April 1</span>
-            <span>11:00 AM</span>
-          </div>
-          <div class="newsTxt">
-            <span>New salsa lessons on Wednesdays</span>
-          </div>
-        </div>
-        <div class="news">
-          <div class="newsDate">
-            <span>March 30</span>
-            <span>10:00 AM</span>
-          </div>
-          <div class="newsTxt">
-            <span>New hours for spinning class</span>
-          </div>
-        </div>
-      </div>
-      <div class="newsRow">
-        <div class="news">
-          <div class="newsDate">
-            <span>March 27</span>
-            <span>1:15 PM</span>
-          </div>
-          <div class="newsTxt">
-            <span>Poll: What classes are you missing?</span>
-          </div>
-        </div>
-        <div class="news">
-          <div class="newsDate">
-            <span>March 21</span>
-            <span>3:42 PM</span>
-          </div>
-          <div class="newsTxt">
-            <span>Your security concerns have been taken into account</span>
-          </div>
-        </div>
-      </div>
-      <div class="newsRow" id="newsR3" style="display:none">
-          <div class="news">
-            <div class="newsDate">
-              <span>March 14</span>
-              <span>10:35 AM</span>
-            </div>
-            <div class="newsTxt">
-              <span>Remodeling of the east wing will begin May 1st</span>
-            </div>
-          </div>
-          <div class="news">
-            <div class="newsDate">
-              <span>March 1</span>
-              <span>11:00 AM</span>
-            </div>
-            <div class="newsTxt">
-              <span>New hours for yoga class</span>
-            </div>
-          </div>
-        </div>
-      <div class="newsRow">
-        <img src="images/downArrow.jpg" alt="Arrow Down" id="newsArrow" onclick="moreNews()">
-      </div>
-
-    </div>
-
-  </div>
-</body>
-
+		<div class="content">
+			<div id="busyTime">
+				<img id="gauge" src="https://via.placeholder.com/150" />
+				<div id="bars">
+					<div id="time">
+						<h3>How busy is the center now?</h3>
+						<h3 id="date"></h3>
+					</div>
+					<div id="meters">
+						<div class="progressBar">
+							<strong>Gym</strong>
+							<progress value="10" max="25"></progress>
+						</div>
+						<div class="progressBar">
+							<strong>Weight Room</strong>
+							<progress value="10" max="25"></progress>
+						</div>
+						<div class="progressBar">
+							<strong>Pool</strong>
+							<progress value="10" max="25"></progress>
+						</div>
+						<div class="progressBar">
+							<strong>Squash</strong>
+							<progress value="10" max="25"></progress>
+						</div>
+						<div class="progressBar">
+							<strong>Field</strong>
+							<progress value="10" max="25"></progress>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="newsContainer">
+				<div class="newsRow">
+					<div class="news">
+						<div class="newsDate">
+							<span>April 1</span>
+							<span>11:00 AM</span>
+						</div>
+						<div class="newsTxt">
+							<span>New salsa lessons on Wednesdays</span>
+						</div>
+					</div>
+					<div class="news">
+						<div class="newsDate">
+							<span>March 30</span>
+							<span>10:00 AM</span>
+						</div>
+						<div class="newsTxt">
+							<span>New hours for spinning class</span>
+						</div>
+					</div>
+				</div>
+				<div class="newsRow">
+					<div class="news">
+						<div class="newsDate">
+							<span>March 27</span>
+							<span>1:15 PM</span>
+						</div>
+						<div class="newsTxt">
+							<span>Poll: What classes are you missing?</span>
+						</div>
+					</div>
+					<div class="news">
+						<div class="newsDate">
+							<span>March 21</span>
+							<span>3:42 PM</span>
+						</div>
+						<div class="newsTxt">
+							<span>Your security concerns have been taken into account</span>
+						</div>
+					</div>
+				</div>
+				<div class="newsRow" id="newsR3" style="display:none">
+					<div class="news">
+						<div class="newsDate">
+							<span>March 14</span>
+							<span>10:35 AM</span>
+						</div>
+						<div class="newsTxt">
+							<span>Remodeling of the east wing will begin May 1st</span>
+						</div>
+					</div>
+					<div class="news">
+						<div class="newsDate">
+							<span>March 1</span>
+							<span>11:00 AM</span>
+						</div>
+						<div class="newsTxt">
+							<span>New hours for yoga class</span>
+						</div>
+					</div>
+				</div>
+				<i id="more-news-arrow" class="material-icons" onclick="moreNews()">
+					keyboard_arrow_down
+				</i>
+			</div>
+		</div>
+	</body>
 </html>
