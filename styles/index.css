@@ -5,7 +5,7 @@
 #busyTime {
   display: flex;
   flex-direction: row;
-  margin: 5% 0;
+  margin-bottom: 5%;
 }
 
 #gauge {
@@ -84,6 +84,7 @@ progress[value]::-webkit-progress-value {
   border: 2px dotted #ff6e03;
 	border-radius: 2%;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .newsDate {
@@ -110,4 +111,5 @@ progress[value]::-webkit-progress-value {
   padding: 1%;
   border-radius: 50%;
   background-color: #ff6e03;
+  cursor: pointer;
 }
