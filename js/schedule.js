@@ -116,3 +116,7 @@ function setWeekEventsList(weeks, week) {
 		weekEventsList[1].classList.remove("hidden");
 	}
 }
+
+function setFilter() {
+	
+}

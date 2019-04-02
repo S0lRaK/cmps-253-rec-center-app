@@ -15,6 +15,7 @@
 #calendar {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 5%;
 }
 
 #calendar-month {
@@ -50,6 +51,27 @@
 
 .calendar-day {
 	width: 15%;
+}
+
+#filters {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#filters button {
+	cursor: pointer;
+	padding: 1% 3%;
+	font-size: 1.3rem;
+	background-color: transparent;
+	border: 1px solid #ff6e03;
+	border-radius: 5%;
+	margin-bottom: 3%;
+	width: 50%;
+}
+
+#filters button.active {
+	background-color: #43ffdd;
 }
 
 #list {
