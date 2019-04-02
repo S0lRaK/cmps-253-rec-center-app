@@ -66,6 +66,10 @@
 	margin: 0 5% 0 10%;
 }
 
+.week-events.hidden {
+	display: none;
+}
+
 .day-events {
 	display: flex;
 	flex-direction: column;
