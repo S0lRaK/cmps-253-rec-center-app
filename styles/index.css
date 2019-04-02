@@ -115,3 +115,7 @@ progress[value]::-webkit-progress-value {
   background-color: #ff6e03;
   cursor: pointer;
 }
+
+.hidden {
+  display:none;
+}

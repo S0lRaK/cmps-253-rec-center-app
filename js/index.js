@@ -4,13 +4,12 @@ window.onload = initialize;
 
 //counts the total people in the gym
 let totalPeople = 0;
-let check = true;
 
 function initialize() {
 	setCurrentDateTime();
 	setMeters();
 	setGauge();
-  newsCheck();
+	newsCheck();
 }
 
 function setCurrentDateTime() {
@@ -39,23 +38,24 @@ function setCurrentDateTime() {
 }
 
 function newsCheck() {
-	if (check == true) {
-		window.onwheel = moreNews;
-	}
+	window.onwheel = moreNews;
 }
 
 function onWheel(event) {
-	moreNews.off('DOMMouseScroll mousewheel');	
+	moreNews.off("DOMMouseScroll mousewheel");
 }
 
 function moreNews(event) {
-	let displayRow = document.getElementById("newsR3");
-	displayRow.style = true;	
+	let newsRows = document.querySelectorAll(".newsRow.hidden");
+
+	newsRows.forEach(row => {
+		row.classList.remove("hidden");
+	});
 }
 
 function setMeters() {
 	let progressBars = document.querySelectorAll("progress");
-	for(let bar of progressBars){
+	for (let bar of progressBars) {
 		let people = getRandomInt(0, 26);
 		bar.value = people;
 		totalPeople = totalPeople + people;
