@@ -6,7 +6,7 @@ accent-color = #43ffdd
 */
 
 html {
-	background-color: #ff9f41;
+	background-color: white;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 .content {
-	margin: 5%;
+	margin: 3%;
 	display: flex;
 }
 
