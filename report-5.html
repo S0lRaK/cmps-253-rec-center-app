@@ -18,7 +18,7 @@
 		<!-- Custom Styles -->
 		<link rel="stylesheet" href="styles/master.css" />
 		<link rel="stylesheet" href="styles/navbar.css" />
-		<link rel="stylesheet" href="styles/report-2.css" />
+		<link rel="stylesheet" href="styles/report-5.css" />
 		<!-- Custom Scripts -->
 		<script src="js/login.js"></script>
 		<script src="js/report.js"></script>
@@ -70,43 +70,45 @@
 			</form>
 		</div>
 		<div class="content">
-			<div id="box">
-				<ul class="progressbar">
-					<li></li>
-					<li class="active"></li>
-					<li></li>
-					<li></li>
-				</ul>
+			<div id="confirmation">
+				<h2>Review Report</h2>
 			</div>
-			<div id="issue">
-				<p>Where?</p>
-				<select id="room-selection" onchange="machineSelection()">
-					<option value="none">Select a room</option>
-					<option value="Weight Room">Weight Room</option>
-					<option value="Swimming Pool">Swimming Pool</option>
-					<option value="Courts">Courts</option>
-				</select>
-				<select id="machine-selection" class="hidden">
-					<option value="">Select a machine</option>
-					<option value="Pulldown">Pulldown machine</option>
-					<option value="Bench">Bench</option>
-					<option value="Treadmill">Treadmill</option>
-					<option value="Leg Press">Leg Press</option>
-					<option value="Cable Machine">Cable Machine</option>
-					<option value="Bicep Curl Machine">Bicep Curls</option>
-					<option value="Chest Press">Chest Press</option>
-					<option value="Hack Squat">Hack Squat</option>
-					<option value="Bike">Bike</option>
-					<option value="Ellipticals">Ellipticals</option>
-					<option value="Shoulder Press">Shoulder Press</option>
-				</select>
+
+			<div id="report-review">
+				<p>
+					Issue: Damage
+				</p>
+				<p>
+					Where: Weight Room
+				</p>
+				<p>
+					Machine: Shoulder Press
+				</p>
+				<p>
+					Date: April 1st, 2019
+				</p>
+				<p>
+					Time: 12:30 PM
+				</p>
+				<p>
+					Description added: Cable broken
+				</p>
+				<p>
+					Photo/video added: img2029.jpg
+				</p>
 			</div>
+
 			<div id="page-selection">
-				<a href="report-1.html">
+				<a
+					href="report-4.html"
+					class="previous"
+					onclick="popup(this)"
+					data-type="back"
+				>
 					<i class="material-icons">keyboard_arrow_left</i>
 				</a>
-				<a href="report-3.html">
-					<i class="material-icons">keyboard_arrow_right</i>
+				<a href="report-6.html" id="submit" onclick="popup(this)" data-type="next">
+					<button>SUBMIT</button>
 				</a>
 			</div>
 		</div>

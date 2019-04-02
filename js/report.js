@@ -5,7 +5,7 @@ function setButtonActive(event) {
 	button.classList.add("active");
 }
 
-function popup() {
+/* function popup() {
 	let type = element.getAttribute("date-type");
 	let form = document.getElementsByClassName("confirmation")[0];
 
@@ -14,5 +14,12 @@ function popup() {
 		// Populate the order using a fellow function like populate()
 	} else {
 		form.classList.add("disabled");
+	}
+} */
+
+function machineSelection() {
+	let selectedRoom = document.getElementById("room-selection").value;
+	if (selectedRoom === "Weight Room") {
+		document.getElementById("machine-selection").classList.remove("hidden");
 	}
 }
