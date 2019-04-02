@@ -99,9 +99,11 @@
 }
 
 .day-events .weekday {
+	border-top: 2px solid #ff6e03; 
 	border-bottom: 2px solid #ff6e03;
-	padding: 1% 0;
+	padding: 1%;
 	width: 90%;
+	background-color: #ff9f41;
 }
 
 .day-events .event {
@@ -109,10 +111,6 @@
 	flex-direction: column;
 	width: 50%;
 	border-bottom: 1px dotted #ff6e03;
-}
-
-.day-events .event:last-child {
-	border-bottom: 2px solid #ff6e03;
 }
 
 .day-events .event span {
