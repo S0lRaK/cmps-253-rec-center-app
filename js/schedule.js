@@ -92,7 +92,8 @@ function setClickWeeks() {
 	calendarWeeks.forEach(week => {
 		week.addEventListener("click", event => {
 			setSelectedWeek(calendarWeeks, week);
-			setWeekEventsList(calendarWeeks, week);
+			let activeFilter = document.querySelector("#filters .active").dataset.filter;
+			setWeekEventsList(calendarWeeks, week, activeFilter);
 		});
 	});
 }
@@ -105,18 +106,37 @@ function setSelectedWeek(weeks, week) {
 	week.classList.add("selected");
 }
 
-function setWeekEventsList(weeks, week) {
+function setWeekEventsList(weeks, week, filter) {
 	let weekEventsList = document.querySelectorAll("#list .week-events");
+
+	weekEventsList.forEach(week => {
+		week.classList.add("hidden");
+	})
+
+	let weekEventsListFilter = document.querySelectorAll("#list ." + filter);
 	
 	if (week == weeks[0]) {
-		weekEventsList[0].classList.remove("hidden");
-		weekEventsList[1].classList.add("hidden");
+		weekEventsListFilter[0].classList.remove("hidden");
 	} else if (week == weeks[1]) {
-		weekEventsList[0].classList.add("hidden");
-		weekEventsList[1].classList.remove("hidden");
+		weekEventsListFilter[1].classList.remove("hidden");
 	}
 }
 
-function setFilter() {
-	
+function setFilter(event) {
+	let activeFilter = event.currentTarget;
+	let activeFilterData = activeFilter.dataset.filter;
+	let filters = document.querySelectorAll("#filters button");
+
+	filters.forEach(filter => {
+		filter.classList.remove("active");
+	});
+
+	activeFilter.classList.add("active");
+
+	let calendarWeeks = document.querySelectorAll(
+		"#calendar-weeks .calendar-week"
+	);
+	let selectedWeek = document.querySelector(".calendar-week.selected");
+
+	setWeekEventsList(calendarWeeks, selectedWeek, activeFilterData);
 }
