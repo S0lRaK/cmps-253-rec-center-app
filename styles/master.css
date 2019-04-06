@@ -2,6 +2,7 @@
 Colour palette
 primary-color = #ff6e03
 primary-light-color = #ff9f41
+secondary-color = #cc9117
 accent-color = #43ffdd
 */
 
@@ -57,6 +58,10 @@ img:first-child {
 
 .navbar li:last-child {
 	width: 8%;
+}
+
+.navbar li:not(.active):hover {
+	background-color: #cc9117;
 }
 
 .navbar li a {
