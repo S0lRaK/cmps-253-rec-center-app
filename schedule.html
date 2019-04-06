@@ -17,7 +17,6 @@
 		/>
 		<!-- Custom Styles -->
 		<link rel="stylesheet" href="styles/master.css" />
-		<link rel="stylesheet" href="styles/navbar.css" />
 		<link rel="stylesheet" href="styles/schedule.css" />
 		<!-- Custom Scripts -->
 		<script src="js/login.js"></script>
@@ -25,21 +24,33 @@
 	<body>
 		<header>
 			<ul class="navbar">
-				<a href="index.html">
-					<img src="images/logo.jpg" alt="Play it Again logo" />
-				</a>
-				<li class="active">
+				<img src="images/logo.jpg" alt="Play it Again logo" />
+				<li>
 					<a href="#">
-						Schedule
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="schedule.html">
+						<i class="material-icons">calendar_today</i>
+						<span>Schedule</span>
 					</a>
 				</li>
 				<li>
 					<a href="report-1.html">
-						Report Issue
+						<i class="material-icons">report_problem</i>
+						<span>Report</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<i class="material-icons">info</i>
+						<span>About</span>
 					</a>
 				</li>
 				<li onclick="openPop()">
-					Login
+					<i class="material-icons">person</i>
 				</li>
 			</ul>
 		</header>
