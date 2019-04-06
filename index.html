@@ -17,7 +17,6 @@
 		/>
 		<!-- Custom Styles -->
 		<link rel="stylesheet" href="styles/master.css" />
-		<link rel="stylesheet" href="styles/navbar.css" />
 		<link rel="stylesheet" href="styles/index.css" />
 		<!-- Custom Scripts -->
 		<script src="js/index.js"></script>
@@ -27,21 +26,33 @@
 	<body>
 		<header>
 			<ul class="navbar">
+				<img src="images/logo.jpg" alt="Play it Again logo" />
+				<li class="active">
 					<a href="#">
-							<img src="images/logo.jpg" alt="Play it Again logo" />
-						</a>
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
 				<li>
 					<a href="schedule.html">
-						Schedule
+						<i class="material-icons">calendar_today</i>
+						<span>Schedule</span>
 					</a>
 				</li>
 				<li>
 					<a href="report-1.html">
-						Report Issue
+						<i class="material-icons">report_problem</i>
+						<span>Report</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<i class="material-icons">info</i>
+						<span>About</span>
 					</a>
 				</li>
 				<li onclick="openPop()">
-					Login
+					<i class="material-icons">person</i>
 				</li>
 			</ul>
 		</header>
@@ -73,7 +84,7 @@
 
 		<div class="content">
 			<div id="busyTime">
-				<img id="gauge" src="https://via.placeholder.com/150" alt="Gauge" />
+				<img id="gauge" src="" alt="Gauge" />
 				<div id="bars">
 					<div id="time">
 						<span>How busy is the center <strong>now</strong>?</span>
