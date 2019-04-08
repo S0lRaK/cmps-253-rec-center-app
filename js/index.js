@@ -4,6 +4,7 @@ window.onload = initialize;
 
 //counts the total people in the gym
 let totalPeople = 0;
+let people = 0;
 
 function initialize() {
 	setCurrentDateTime();
@@ -55,11 +56,55 @@ function moreNews(event) {
 
 function setMeters() {
 	let progressBars = document.querySelectorAll("progress");
+	let i = 0;
 	for (let bar of progressBars) {
-		let people = getRandomInt(0, 26);
+	
+		people = getRandomInt(0, 26);
 		bar.value = people;
 		totalPeople = totalPeople + people;
+		setBarNums(i);
+		i++;
 	}
+}
+
+function setBarNums(i){
+	i=i;
+		if(i == 0){
+			let progressNum = document.getElementById('gymNum');
+			let number = document.createElement('span');
+			let numbertxt = people;
+			number.append(numbertxt);
+			progressNum.append(number.innerText);
+		}
+		if(i == 1){
+			let progressNum = document.getElementById('wRoomNum');
+			let number = document.createElement('span');
+			let numbertxt = people;
+			number.append(numbertxt);
+			progressNum.append(number.innerText);
+		}
+		if(i == 2){
+			let progressNum = document.getElementById('poolNum');
+			let number = document.createElement('span');
+			let numbertxt = people;
+			number.append(numbertxt);
+			progressNum.append(number.innerText);
+		}
+		if(i == 3){
+			let progressNum = document.getElementById('sqNum');
+			let number = document.createElement('span');
+			let numbertxt = people;
+			number.append(numbertxt);
+			progressNum.append(number.innerText);
+		}
+		if(i == 4){
+			let progressNum = document.getElementById('fieldNum');
+			let number = document.createElement('span');
+			let numbertxt = people;
+			number.append(numbertxt);
+			progressNum.append(number.innerText);
+		}
+	
 }
 
 function setGauge() {
