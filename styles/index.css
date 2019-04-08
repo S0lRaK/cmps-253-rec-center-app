@@ -45,6 +45,19 @@
   margin-bottom: 5%;
 } 
 
+.barTop{
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: space-between;
+}
+
+.numTop{
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+  border: 2px dotted #ff6e03;
+	border-radius: 2%;
+}
+
 progress[value] {
 	/* Reset the default appearance */
 	-webkit-appearance: none;
