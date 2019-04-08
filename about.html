@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Play It Again Recreation Center | About</title>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Kodchasan:400,700"
+			rel="stylesheet"
+		/>
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="styles/master.css" />
+		<link rel="stylesheet" href="styles/about.css" />
+		<!-- Custom Scripts -->
+		<script src="js/login.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<ul class="navbar">
+				<img src="images/logo.jpg" alt="Play it Again logo" />
+				<li>
+					<a href="index.html">
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="schedule.html">
+						<i class="material-icons">calendar_today</i>
+						<span>Schedule</span>
+					</a>
+				</li>
+				<li>
+					<a href="report-1.html">
+						<i class="material-icons">report_problem</i>
+						<span>Report</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<i class="material-icons">info</i>
+						<span>About</span>
+					</a>
+				</li>
+				<li onclick="openPop()">
+					<i class="material-icons">person</i>
+				</li>
+			</ul>
+		</header>
+
+		<div id="login">
+			<form class="form-container">
+				<br />
+				<br />
+				<br />
+				<br />
+
+				<label for="email"><b>Email</b></label>
+				<input type="email" placeholder="Enter Email" name="email" required />
+
+				<label for="psw"><b>Password</b></label>
+				<input
+					type="password"
+					placeholder="Enter Password"
+					name="psw"
+					required
+				/>
+
+				<button type="submit" class="btn">Login</button>
+				<button type="button" class="btn cancel" onclick="closePop()">
+					Close
+				</button>
+			</form>
+		</div>
+
+		<div class="content">
+			<div>
+				<img src="images/sait-logo.png" alt="SAIT logo" />
+				<div id="info">
+					<h1>CMPS-253 <span>-</span> Interface Design</h1>
+					<h2>Winter 2019</h2>
+					<div id="authors">
+            <span>Eduardo Arellano</span>
+						<span>Jatin Buriac</span>
+						<span>Carlos J. Garcia Carmona</span>
+						<span>Connor McCrum</span>
+					</div>
+				</div>
+			</div>
+			<div class="references">
+				<span>SAIT logo from SAIT's website</span>
+				<a href="https://www.sait.ca" target="_blank">https://www.sait.ca</a>
+			</div>
+		</div>
+	</body>
+</html>
