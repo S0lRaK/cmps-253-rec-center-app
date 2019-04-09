@@ -1,60 +1,60 @@
 .content {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 #busyTime {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 5%;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5%;
 }
 
 #gauge {
-  display: flex;
-  margin-right: 5%;
-  width: 326;
-  height: 211;
+	display: flex;
+	margin-right: 5%;
+	width: 326;
+	height: 211;
 }
 
 #bars {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 #time {
 	display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 2%;
-  font-size: 1.5rem;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2%;
+	font-size: 1.5rem;
 }
 
 #meters {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .progressBar {
 	display: flex;
-  flex-direction: column;
-  margin: 0 5% 2% 0;
+	flex-direction: column;
+	margin: 0 5% 2% 0;
 }
 
 .progressBar span {
-  margin-bottom: 5%;
-} 
-
-.barTop{
-  display: flex;
-  /*flex-direction: column;*/
-  justify-content: space-between;
+	margin-bottom: 5%;
 }
 
-.numTop{
-  padding-right: 2.5%;
-  padding-left: 2.5%;
-  border: 2px dotted #ff6e03;
+.barTop {
+	display: flex;
+	/*flex-direction: column;*/
+	justify-content: space-between;
+}
+
+.numTop {
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	border: 2px dotted #ff6e03;
 	border-radius: 2%;
 }
 
@@ -87,48 +87,48 @@ progress[value]::-webkit-progress-value {
 .newsRow {
 	display: flex;
 	flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 2%;
+	justify-content: space-between;
+	margin-bottom: 2%;
 }
 
 .news {
-  display: flex;
-  flex-direction: row;
-  width: 44%;
-  padding: 2%;
-  border: 2px dotted #ff6e03;
+	display: flex;
+	flex-direction: row;
+	width: 44%;
+	padding: 2%;
+	border: 2px dotted #ff6e03;
 	border-radius: 2%;
-  font-size: 1.3rem;
-  cursor: pointer;
+	font-size: 1.3rem;
+	cursor: pointer;
 }
 
 .newsDate {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-  border-right: 1px solid black;
-  margin-right: 5%;
+	border-right: 1px solid black;
+	margin-right: 5%;
 }
 
 .newsDate span:last-child {
-  font-style: italic;
+	font-style: italic;
 }
 
 .newsTxt {
 	display: flex;
-  width: 55%;
-  font-weight: 700;
+	width: 55%;
+	font-weight: 700;
 }
 
 #more-news-arrow {
-  align-self: center;
-  font-size: 3rem;
-  padding: 1%;
-  border-radius: 50%;
-  background-color: #ff6e03;
-  cursor: pointer;
+	align-self: center;
+	font-size: 3rem;
+	padding: 1%;
+	border-radius: 50%;
+	background-color: #ff6e03;
+	cursor: pointer;
 }
 
 .hidden {
-  display:none;
+	display: none;
 }
