@@ -56,55 +56,39 @@ function moreNews(event) {
 
 function setMeters() {
 	let progressBars = document.querySelectorAll("progress");
-	let i = 0;
+	let index = 0;
 	for (let bar of progressBars) {
-	
 		people = getRandomInt(0, 26);
 		bar.value = people;
 		totalPeople = totalPeople + people;
-		setBarNums(i);
-		i++;
+		setBarNums(index, people);
+		index++;
 	}
 }
 
-function setBarNums(i){
-	i=i;
-		if(i == 0){
-			let progressNum = document.getElementById('gymNum');
-			let number = document.createElement('span');
-			let numbertxt = people;
-			number.append(numbertxt);
-			progressNum.append(number.innerText);
-		}
-		if(i == 1){
-			let progressNum = document.getElementById('wRoomNum');
-			let number = document.createElement('span');
-			let numbertxt = people;
-			number.append(numbertxt);
-			progressNum.append(number.innerText);
-		}
-		if(i == 2){
-			let progressNum = document.getElementById('poolNum');
-			let number = document.createElement('span');
-			let numbertxt = people;
-			number.append(numbertxt);
-			progressNum.append(number.innerText);
-		}
-		if(i == 3){
-			let progressNum = document.getElementById('sqNum');
-			let number = document.createElement('span');
-			let numbertxt = people;
-			number.append(numbertxt);
-			progressNum.append(number.innerText);
-		}
-		if(i == 4){
-			let progressNum = document.getElementById('fieldNum');
-			let number = document.createElement('span');
-			let numbertxt = people;
-			number.append(numbertxt);
-			progressNum.append(number.innerText);
-		}
-	
+function setBarNums(progressBarIndex, progressBarValue) {
+	let progressBarNum;
+	switch (progressBarIndex) {
+		case 0:
+			progressBarNum = document.getElementById("gymNum");
+			break;
+		case 1:
+			progressBarNum = document.getElementById("wRoomNum");
+			break;
+		case 2:
+			progressBarNum = document.getElementById("poolNum");
+			break;
+		case 3:
+			progressBarNum = document.getElementById("sqNum");
+			break;
+		case 4:
+			progressBarNum = document.getElementById("fieldNum");
+			break;
+	}
+
+	let spanElement = document.createElement("span");
+	spanElement.innerText = progressBarValue;
+	progressBarNum.append(spanElement);
 }
 
 function setGauge() {
