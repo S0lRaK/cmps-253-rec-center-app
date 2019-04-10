@@ -71,7 +71,14 @@
 #comment {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 2%;
+}
+
+#comment textarea {
+	width: 50%;
+	padding: 1rem;
+	border: 1px solid #ff6e03;
 }
 
 #file {
