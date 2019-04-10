@@ -76,10 +76,15 @@
 
 #file {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 2%;
+  font-size: 1.5rem;
+}
+
+#file label {
+	margin-bottom: 2%;
 }
 
 #page-selection {
