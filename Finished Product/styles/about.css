@@ -1,0 +1,47 @@
+.content {
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content > div:first-child {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 2rem;
+	min-height: 50vh;
+}
+
+.content > div:last-child {
+	align-self: center;
+}
+
+.content img {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+}
+
+#info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#info h1 span,
+#info h2 {
+	color: gray;
+}
+
+#info #authors {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#info #authors span {
+	margin-bottom: 1rem;
+}
+
+.references {
+	font-style: italic;
+}
