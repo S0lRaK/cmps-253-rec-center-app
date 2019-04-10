@@ -25,49 +25,107 @@
 	<body>
 		<header>
 			<ul class="navbar">
-				<a href="index.html">
-					<img src="images/logo.jpg" alt="Play it Again logo" />
-				</a>
+				<img src="images/logo.jpg" alt="Play it Again logo" />
+				<li>
+					<a href="index.html">
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
 				<li>
 					<a href="schedule.html">
-						Schedule
+						<i class="material-icons">calendar_today</i>
+						<span>Schedule</span>
 					</a>
 				</li>
 				<li class="active">
 					<a href="#">
-						Report Issue
+						<i class="material-icons">report_problem</i>
+						<span>Report</span>
 					</a>
 				</li>
-				<li onclick="openPop()">
-					Login
+				<li>
+					<a href="about.html">
+						<i class="material-icons">info</i>
+						<span>About</span>
+					</a>
+				</li>
+				<li id="navbar-profile" onclick="togglePopUp()">
+					<i class="material-icons">person</i>
+					<div id="profile" hidden>
+						<div id="sign-up" class="option" onclick="stopEventPropagation()">
+							<h3>Sign Up</h3>
+							<form action="">
+								<div>
+									<label for="signup-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="signup-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="signup-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="signup-password"
+										required
+									/>
+								</div>
+								<button>Sign Up</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Already have account?
+									<span class="link" onclick="toggleOption('login')"
+										>Log in</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							id="login"
+							class="option hidden"
+							onclick="stopEventPropagation()"
+						>
+							<h3>Log In</h3>
+							<form action="">
+								<div>
+									<label for="login-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="login-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="login-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="login-password"
+										required
+									/>
+								</div>
+								<button>Log In</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Don't have account yet?
+									<span class="link" onclick="toggleOption('sign-up')"
+										>Sign up</span
+									>
+								</span>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</header>
 
-		<div id="login">
-			<form class="form-container">
-				<br />
-				<br />
-				<br />
-				<br />
-
-				<label for="email"><b>Email</b></label>
-				<input type="email" placeholder="Enter Email" name="email" required />
-
-				<label for="psw"><b>Password</b></label>
-				<input
-					type="password"
-					placeholder="Enter Password"
-					name="psw"
-					required
-				/>
-
-				<button type="submit" class="btn">Login</button>
-				<button type="button" class="btn cancel" onclick="closePop()">
-					Close
-				</button>
-			</form>
-		</div>
 		<div class="content">
 			<div id="box">
 				<ul class="progressbar">
