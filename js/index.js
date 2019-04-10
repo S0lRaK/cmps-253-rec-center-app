@@ -68,27 +68,34 @@ function setMeters() {
 
 function setBarNums(progressBarIndex, progressBarValue) {
 	let progressBarNum;
+	let icon;
+
 	switch (progressBarIndex) {
 		case 0:
 			progressBarNum = document.getElementById("gymNum");
+			icon = document.querySelector("#" + progressBarNum.id + " i")
 			break;
 		case 1:
 			progressBarNum = document.getElementById("wRoomNum");
+			icon = document.querySelector("#" + progressBarNum.id + " i")
 			break;
 		case 2:
 			progressBarNum = document.getElementById("poolNum");
+			icon = document.querySelector("#" + progressBarNum.id + " i")
 			break;
 		case 3:
 			progressBarNum = document.getElementById("sqNum");
+			icon = document.querySelector("#" + progressBarNum.id + " i")
 			break;
 		case 4:
 			progressBarNum = document.getElementById("fieldNum");
+			icon = document.querySelector("#" + progressBarNum.id + " i")
 			break;
 	}
 
 	let spanElement = document.createElement("span");
 	spanElement.innerText = progressBarValue;
-	progressBarNum.append(spanElement);
+	progressBarNum.insertBefore(spanElement, icon);
 }
 
 function setGauge() {
