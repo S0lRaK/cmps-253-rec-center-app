@@ -29,15 +29,19 @@
 
 #info h1 span,
 #info h2 {
-  color: gray;
+	color: gray;
 }
 
 #info #authors {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #info #authors span {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.references {
+	font-style: italic;
 }

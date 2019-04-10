@@ -17,6 +17,7 @@
 		/>
 		<!-- Custom Styles -->
 		<link rel="stylesheet" href="styles/master.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
 		<link rel="stylesheet" href="styles/about.css" />
 		<!-- Custom Scripts -->
 		<script src="js/login.js"></script>
@@ -50,36 +51,81 @@
 						<span>About</span>
 					</a>
 				</li>
-				<li onclick="openPop()">
+				<li id="navbar-profile" onclick="togglePopUp()">
 					<i class="material-icons">person</i>
+					<div id="profile" hidden>
+						<div id="sign-up" class="option" onclick="stopEventPropagation()">
+							<h3>Sign Up</h3>
+							<form action="">
+								<div>
+									<label for="signup-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="signup-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="signup-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="signup-password"
+										required
+									/>
+								</div>
+								<button>Sign Up</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Already have account?
+									<span class="link" onclick="toggleOption('login')"
+										>Log in</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							id="login"
+							class="option hidden"
+							onclick="stopEventPropagation()"
+						>
+							<h3>Log In</h3>
+							<form action="">
+								<div>
+									<label for="login-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="login-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="login-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="login-password"
+										required
+									/>
+								</div>
+								<button>Log In</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Don't have account yet?
+									<span class="link" onclick="toggleOption('sign-up')">
+										Sign up
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</header>
-
-		<div id="login">
-			<form class="form-container">
-				<br />
-				<br />
-				<br />
-				<br />
-
-				<label for="email"><b>Email</b></label>
-				<input type="email" placeholder="Enter Email" name="email" required />
-
-				<label for="psw"><b>Password</b></label>
-				<input
-					type="password"
-					placeholder="Enter Password"
-					name="psw"
-					required
-				/>
-
-				<button type="submit" class="btn">Login</button>
-				<button type="button" class="btn cancel" onclick="closePop()">
-					Close
-				</button>
-			</form>
-		</div>
 
 		<div class="content">
 			<div>
@@ -88,7 +134,7 @@
 					<h1>CMPS-253 <span>-</span> Interface Design</h1>
 					<h2>Winter 2019</h2>
 					<div id="authors">
-            <span>Eduardo Arellano</span>
+						<span>Eduardo Arellano</span>
 						<span>Jatin Buriac</span>
 						<span>Carlos J. Garcia Carmona</span>
 						<span>Connor McCrum</span>
