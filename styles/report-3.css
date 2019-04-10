@@ -29,6 +29,7 @@
 	margin: 0 auto 10px auto;
 	border-radius: 50%;
 	background-color: white;
+	z-index: -1;
 }
 
 .progressbar li {
@@ -38,6 +39,7 @@
 	float: left;
 	width: 25%;
 	position: relative;
+	z-index: -1;
 }
 
 .progressbar li:after {
@@ -58,6 +60,7 @@
 .progressbar li.active {
   color: #ff6e03;
   font-size: 1.5rem;
+  z-index: 0;
 }
 
 .progressbar li.active:before {

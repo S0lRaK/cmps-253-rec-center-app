@@ -57,6 +57,7 @@
 .progressbar li.active {
   color: #ff6e03;
   font-size: 1.5rem;
+  z-index: -1;
 }
 
 .progressbar li.active:before {
