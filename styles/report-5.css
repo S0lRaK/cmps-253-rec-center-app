@@ -24,6 +24,29 @@ p {
 #report-review {
 	border: 2px dotted #ff6e03;
 	margin-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+}
+
+#report-review div {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+#report-review div p {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#report-review .title {
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+#report-review img {
+	width: 50%;
 }
 
 #page-selection {
