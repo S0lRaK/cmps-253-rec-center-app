@@ -49,6 +49,7 @@
 	float: left;
 	width: 25%;
 	position: relative;
+	z-index: -1;
 }
 
 .progressbar li:after {
@@ -67,12 +68,13 @@
 }
 
 .progressbar li.active {
-	color: #ff6e03;
+	color: black;
 	font-size: 1.5rem;
 }
 
 .progressbar li.active:before {
-	border-color: #ff6e03;
+	border-color: aliceblue;
+	background-color: #ff6e03;
 }
 
 .progressbar li.active + li:after {

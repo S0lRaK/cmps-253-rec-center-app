@@ -58,13 +58,13 @@
 }
 
 .progressbar li.active {
-  color: #ff6e03;
-  font-size: 1.5rem;
-  z-index: 0;
+	color: black;
+	font-size: 1.5rem;
 }
 
 .progressbar li.active:before {
-	border-color: #ff6e03;
+	border-color: aliceblue;
+	background-color: #ff6e03;
 }
 
 .progressbar li.active + li:after {
