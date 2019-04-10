@@ -96,10 +96,11 @@ progress[value]::-webkit-progress-value {
 	flex-direction: row;
 	width: 44%;
 	padding: 2%;
-	border: 2px dotted #ff6e03;
+	border: 5px dotted #ff6e03;
 	border-radius: 2%;
 	font-size: 1.3rem;
 	cursor: pointer;
+	background-color: #ff9f41;
 }
 
 .newsDate {
