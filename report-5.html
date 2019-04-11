@@ -26,88 +26,160 @@
 	<body>
 		<header>
 			<ul class="navbar">
-				<a href="index.html">
-					<img src="images/logo.jpg" alt="Play it Again logo" />
-				</a>
+				<img src="images/logo.jpg" alt="Play it Again logo" />
+				<li>
+					<a href="index.html">
+						<i class="material-icons">home</i>
+						<span>Home</span>
+					</a>
+				</li>
 				<li>
 					<a href="schedule.html">
-						Schedule
+						<i class="material-icons">calendar_today</i>
+						<span>Schedule</span>
 					</a>
 				</li>
 				<li class="active">
 					<a href="#">
-						Report Issue
+						<i class="material-icons">report_problem</i>
+						<span>Report</span>
 					</a>
 				</li>
-				<li onclick="openPop()">
-					Login
+				<li>
+					<a href="about.html">
+						<i class="material-icons">info</i>
+						<span>About</span>
+					</a>
+				</li>
+				<li id="navbar-profile" onclick="togglePopUp()">
+					<i class="material-icons">person</i>
+					<div id="profile" hidden>
+						<div id="sign-up" class="option" onclick="stopEventPropagation()">
+							<h3>Sign Up</h3>
+							<form action="">
+								<div>
+									<label for="signup-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="signup-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="signup-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="signup-password"
+										required
+									/>
+								</div>
+								<button>Sign Up</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Already have account?
+									<span class="link" onclick="toggleOption('login')"
+										>Log in</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							id="login"
+							class="option hidden"
+							onclick="stopEventPropagation()"
+						>
+							<h3>Log In</h3>
+							<form action="">
+								<div>
+									<label for="login-email">Email</label>
+									<input
+										type="email"
+										placeholder="email@example.com"
+										id="login-email"
+										required
+									/>
+								</div>
+								<div>
+									<label for="login-password">Password</label>
+									<input
+										type="password"
+										placeholder="password"
+										id="login-password"
+										required
+									/>
+								</div>
+								<button>Log In</button>
+							</form>
+							<div class="option-change">
+								<span>
+									Don't have account yet?
+									<span class="link" onclick="toggleOption('sign-up')"
+										>Sign up</span
+									>
+								</span>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</header>
 
-		<div id="login">
-			<form class="form-container">
-				<br />
-				<br />
-				<br />
-				<br />
-
-				<label for="email"><b>Email</b></label>
-				<input type="email" placeholder="Enter Email" name="email" required />
-
-				<label for="psw"><b>Password</b></label>
-				<input
-					type="password"
-					placeholder="Enter Password"
-					name="psw"
-					required
-				/>
-
-				<button type="submit" class="btn">Login</button>
-				<button type="button" class="btn cancel" onclick="closePop()">
-					Close
-				</button>
-			</form>
-		</div>
 		<div class="content">
 			<div id="confirmation">
 				<h2>Review Report</h2>
 			</div>
 
 			<div id="report-review">
-				<p>
-					Issue: Damage
-				</p>
-				<p>
-					Where: Weight Room
-				</p>
-				<p>
-					Machine: Shoulder Press
-				</p>
-				<p>
-					Date: April 1st, 2019
-				</p>
-				<p>
-					Time: 12:30 PM
-				</p>
-				<p>
-					Description added: Cable broken
-				</p>
-				<p>
-					Photo/video added: img2029.jpg
-				</p>
+				<div id="required-info">
+					<p>
+						<span class="title">Issue type</span>
+						<span class="input-value">Damage</span>
+					</p>
+					<p>
+						<span class="title">Where</span>
+						<span class="input-value">Weight Room</span>
+					</p>
+					<p>
+						<span class="title">Machine</span>
+						<span class="input-value">Leg Press</span>
+					</p>
+					<p>
+						<span class="title">Date</span>
+						<span class="input-value">April 1st, 2019</span>
+					</p>
+					<p>
+						<span class="title">Time</span>
+						<span class="input-value">12:30 PM</span>
+					</p>
+				</div>
+				<div id="optional-info">
+					<p>
+						<span class="title">Description</span>
+						<span class="input-value">Cable broken</span>
+					</p>
+					<p>
+						<span class="title">Uploaded file</span>
+						<img src="images/leg-press-machine.png" alt="Leg press machine" />
+					</p>
+				</div>
 			</div>
 
 			<div id="page-selection">
 				<a
 					href="report-4.html"
 					class="previous"
-					onclick="popup(this)"
 					data-type="back"
-				>
+				><!-- onclick="popup(this)" -->
 					<i class="material-icons">keyboard_arrow_left</i>
 				</a>
-				<a href="report-6.html" id="submit" onclick="popup(this)" data-type="next">
+				<a
+					href="report-6.html"
+					id="submit"
+					data-type="next"
+				><!-- onclick="popup(this)" -->
 					<button>SUBMIT</button>
 				</a>
 			</div>

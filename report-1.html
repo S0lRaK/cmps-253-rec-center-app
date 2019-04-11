@@ -39,7 +39,7 @@
 					</a>
 				</li>
 				<li class="active">
-					<a href="report-1.html">
+					<a href="#">
 						<i class="material-icons">report_problem</i>
 						<span>Report</span>
 					</a>
@@ -134,16 +134,48 @@
 					<li></li>
 					<li></li>
 				</ul>
+				<div>
+					<p class="active">Select type</p>
+					<p>Select location</p>
+					<p>Select time</p>
+					<p>Extra info</p>
+				</div>
 			</div>
 			<div id="issue">
 				<p>What kind of issue do you want to report?</p>
 			</div>
 			<div id="options">
-				<button id="button-damage" onclick="setButtonActive(event)">
-					DAMAGE
-				</button>
-				<button disabled>MISUSE</button>
-				<button disabled>MISCONDUCT</button>
+				<div>
+					<button id="button-damage" onclick="setButtonActive(event)">
+						DAMAGE
+					</button>
+					<div class="info">
+						<i class="material-icons">info</i>
+						<p>
+							For any damage to a machine, facility equipment or premises.
+						</p>
+					</div>
+				</div>
+				<div>
+					<button disabled>MISUSE</button>
+					<div class="info">
+						<i class="material-icons">info</i>
+						<p>
+							For any improper use of any machine, facility equipment or
+							premises.
+						</p>
+					</div>
+				</div>
+				<div>
+					<button disabled>MISCONDUCT</button>
+					<div class="info">
+						<i class="material-icons">info</i>
+						<p>
+							For any unacceptable or improper behaviour of any member or
+							employee within the facilities.
+						</p>
+					</div>
+				</div>
 			</div>
 			<div id="page-selection">
 				<a href="#" id="previous-step" class="hidden"></a>
