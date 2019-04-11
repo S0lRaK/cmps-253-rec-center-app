@@ -81,6 +81,33 @@
 	background-color: #ff6e03;
 }
 
+#box {
+	display: flex;
+	flex-direction: column;
+}
+
+#box div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#box div p {
+	padding: 1%;
+	background-color: transparent;
+	border: 1px solid #ff6e03;
+	border-radius: 5%;
+	text-transform: uppercase;
+	margin-top: 0;
+	background-color: #ff9f41;
+	width: 15%;
+	text-align: center;
+}
+
+#box div p.active {
+	background-color: #ff6e03;
+}
+
 #options {
 	display: flex;
 	flex-direction: row;
